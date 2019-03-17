@@ -821,3 +821,13 @@ footer a {
   border: none;
   float: right;
 }
+
+/* line 742, components.scss */
+.recaptcha-input {
+  display: none;
+}
+
+/* line 746, components.scss */
+.validate-error {
+  color: #ff0000;
+}

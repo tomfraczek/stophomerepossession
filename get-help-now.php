@@ -1,4 +1,6 @@
 <?php include './components/header.php'?>
+<?php include './components/send.php'?>
+
 
 <h1 class="services-main-header text-bcg">Get Help Now</h1>
 
@@ -15,51 +17,27 @@
 
         <section class="ghn-form-wrapper">
             
-            <form class="ghn-form" method="POST">
+            <form class="ghn-form" action="./components/send.php" method="POST">
                 <div class="ghn-form-input-wrapper">
                     <div class="ghn-form-left">
-                        <input type="text" id="g-recaptcha-response" name="g-recaptcha-response" />
-                        <input class="ghn-input" type="text" id="name" name="user_name" placeholder="First name" />
-                        <input class="ghn-input" type="email" id="mail" name="user_email" placeholder="Last name" />
-                        <input class="ghn-input" type="email" id="mail" name="user_email" placeholder="Email address" />
-                        <input class="ghn-input" type="email" id="mail" name="user_email" placeholder="Phone number" />
-                        <input class="ghn-input" type="email" id="mail" name="user_email" placeholder="Lender" />
+                        <input type="text" class="recaptcha-input" id="g-recaptcha-response" name="g-recaptcha-response" />
+                        <div class="validate-error"><?php echo $firstNameErr;?></div>
+                        <input class="ghn-input" type="text" id="name" name="firstName" placeholder="First name" />
+                        <div class="validate-error"><?php echo $lastNameErr;?></div>
+                        <input class="ghn-input" type="text" id="mail" name="lastName" placeholder="Last name" />
+                        <div class="validate-error"><?php echo $emailErr;?></div>
+                        <input class="ghn-input" type="email" id="mail" name="email" placeholder="Email address" />
+                        <div class="validate-error"><?php echo $phoneErr;?></div>
+                        <input class="ghn-input" type="tel" id="mail" name="phone" placeholder="Phone number" />
+                        <div class="validate-error"><?php echo $lenderErr;?></div>
+                        <input class="ghn-input" type="text" id="mail" name="lander" placeholder="Lender's name" />
                     </div>
-                    <textarea id="msg" name="user_message" placeholder="Short description"></textarea>
+                    <div class="validate-error"><?php echo $messageErr;?></div>
+                    <textarea id="msg" name="message" placeholder="Short description"></textarea>
                 </div>
                 <input class="ghn-submit" type="submit" value="Submit">
             </form>
-<?php
 
-if($_POST){
-    function getCaptcha($SecretKey){
-        $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".SECRET_KEY."&response={$SecretKey}");
-        $Return = json_decode($Response);
-        return $Return;
-    }
-    $Return = getCaptcha($_POST['g-recaptcha-response']);
-    if($Return -> success == true && $Return -> score > 0.5){
-        echo 'success';
-    }else{
-        echo 'fail';
-    }
-}
-
-
-
-
-// define variables and set to empty values
-$firstNameErr = $lastNameErr = $emailErr = $phoneErr = $lenderErr = "";
-$name = $email = $gender = $comment = $website = "";
-
-
-
-
-
-
-
-
-?>
             <script>
                 grecaptcha.ready(function() {
                     grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'}).then(function(token) {

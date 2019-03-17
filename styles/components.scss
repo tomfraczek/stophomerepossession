@@ -738,3 +738,11 @@ footer{
     border: none; 
     float:right;
 }
+
+.recaptcha-input{
+    display:none;
+}
+
+.validate-error{
+    color: #ff0000;
+}
