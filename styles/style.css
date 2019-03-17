@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Delius|Dhurjati");
+/* line 3, style.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, style.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 12, style.scss */
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 12, style.scss */
+  .container {
+    width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 12, style.scss */
+  .container {
+    width: 940px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 12, style.scss */
+  .container {
+    width: 1140px;
+  }
+}
+
+/* line 16, style.scss */
+.services-asides {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}

@@ -1,0 +1,21 @@
+@import "./global/variables";
+
+body{
+    margin: 0;
+    padding:0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    @include container;
+}
+
+.services-asides{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}

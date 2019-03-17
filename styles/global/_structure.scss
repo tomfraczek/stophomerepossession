@@ -1,0 +1,36 @@
+@import "breakpoints";
+
+@import url('https://fonts.googleapis.com/css?family=Delius|Dhurjati');
+
+@mixin tablet {
+    @media (min-width: $tablet-breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin laptop {
+    @media (min-width: $laptop-breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: $desktop-breakpoint) {
+      @content;
+    }
+  }
+  
+  @mixin container {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+    @include tablet {
+      width: $tablet-width;
+    }
+    @include laptop {
+      width: $laptop-width;
+    }
+    @include desktop {
+      width: $desktop-width;
+    }
+  }

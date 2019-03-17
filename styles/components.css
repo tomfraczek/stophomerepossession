@@ -1,0 +1,823 @@
+@import url("https://fonts.googleapis.com/css?family=Delius|Dhurjati");
+/* line 3, components.scss */
+header {
+  box-shadow: 0 5px 10px 0 rgba(34, 48, 73, 0.2);
+}
+
+/* line 7, components.scss */
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7px auto;
+  height: 84px;
+}
+
+/* line 17, components.scss */
+.nav-logo {
+  height: 60px;
+}
+
+/* line 21, components.scss */
+.main-nav {
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* line 28, components.scss */
+.main-nav li {
+  list-style-type: none;
+  margin: 0 20px;
+}
+/* line 32, components.scss */
+.main-nav li a {
+  padding: 5px 5px;
+  font-size: 15px;
+  font-family: 'DejaVu Sans';
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #1cb0d5;
+  transition: all 0.1s ease-out;
+}
+/* line 41, components.scss */
+.main-nav li a:hover {
+  color: #1cd5bd;
+}
+/* line 45, components.scss */
+.main-nav li a:hover .arrow-down {
+  fill: #1cd5bd;
+}
+
+/* line 53, components.scss */
+.main-nav--cta {
+  font-family: DejaVu Sans;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 10px 20px!important;
+  border-radius: 3px;
+  background: #1cb0d5;
+  color: #fff!important;
+  transition: all 0.1s ease-out;
+}
+/* line 59, components.scss */
+.main-nav--cta:hover {
+  background: #1cd5bd;
+}
+
+/* line 64, components.scss */
+.main-logo {
+  display: flex;
+  margin-top: 10px;
+}
+/* line 68, components.scss */
+.main-logo:hover .logo-text--first {
+  color: #1cd5bd;
+}
+
+/* line 73, components.scss */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* line 80, components.scss */
+.logo-text--first {
+  font-family: 'Delius', cursive;
+  color: #1cb0d5;
+  position: relative;
+  top: 20px;
+  font-size: 24px;
+}
+
+/* line 88, components.scss */
+.logo-text--second {
+  color: #676868;
+  font-family: 'Dhurjati', sans-serif;
+  font-size: 25px;
+  top: -4px;
+  position: relative;
+}
+
+/* line 97, components.scss */
+.trigger-dropdown:hover {
+  cursor: pointer;
+}
+/* line 100, components.scss */
+.trigger-dropdown:hover + .dropdown-list {
+  display: block;
+}
+
+/* line 105, components.scss */
+.main-nav--dropdown {
+  position: relative;
+}
+
+/* line 109, components.scss */
+.dropdown-list {
+  display: none;
+  position: absolute;
+  padding: 0;
+  right: -9px;
+  top: 23px;
+  z-index: 2;
+  padding: 0;
+  width: max-content;
+  background: #fff;
+  box-shadow: 0 20px 66px 0 rgba(34, 48, 73, 0.2);
+  border-radius: 3px;
+}
+/* line 122, components.scss */
+.dropdown-list::before {
+  position: absolute;
+  z-index: 2;
+  top: -4px;
+  right: 15px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  content: " ";
+  background-color: inherit;
+  transform: rotate(45deg);
+}
+/* line 135, components.scss */
+.dropdown-list li {
+  margin: 5px;
+  padding: 15px 20px;
+}
+/* line 139, components.scss */
+.dropdown-list li a {
+  text-transform: capitalize;
+  font-weight: normal;
+  padding: 15px 20px;
+}
+/* line 145, components.scss */
+.dropdown-list li:hover {
+  background: #c6edf7;
+  cursor: pointer;
+}
+/* line 151, components.scss */
+.dropdown-list:hover {
+  display: block;
+}
+
+/* line 156, components.scss */
+.new-icon {
+  background: #2ed06e;
+  display: inline-block;
+  min-width: 16px;
+  padding: 5px 8px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 10px;
+}
+
+/* line 171, components.scss */
+.arrow-down {
+  width: 11px;
+  height: 11px;
+  fill: #1cb0d5;
+}
+
+/* line 177, components.scss */
+.main-pic {
+  width: 100%;
+}
+
+/* line 181, components.scss */
+.main-picture {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* line 188, components.scss */
+.main-picture--content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* line 202, components.scss */
+.main-picture--content__header {
+  font-family: 'DejaVu Sans';
+  color: #1cb0d5;
+  font-size: 52px;
+  margin-top: -30px;
+}
+
+/* line 209, components.scss */
+.header--grey-word {
+  color: #676868;
+}
+
+/* line 213, components.scss */
+.main-picture--content__text {
+  margin-left: 100px;
+  margin: auto;
+  text-align: center;
+}
+/* line 218, components.scss */
+.main-picture--content__text p {
+  font-family: 'DejaVu Sans';
+  color: #353536;
+  margin: 0;
+  letter-spacing: 1px;
+  word-spacing: 0px;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+/* line 229, components.scss */
+.button {
+  font-family: DejaVu Sans;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 10px 20px!important;
+  border-radius: 3px;
+  transition: all 0.2s ease-out;
+}
+
+/* line 234, components.scss */
+.help {
+  background: #1cb0d5;
+  color: #fff;
+}
+/* line 238, components.scss */
+.help:hover {
+  background: #fff;
+  color: #1cb0d5;
+}
+
+/* line 244, components.scss */
+.quick {
+  background: #fbd415;
+  color: #fff;
+  margin-left: 25px;
+}
+/* line 249, components.scss */
+.quick:hover {
+  background: #fff;
+  color: #fbd415;
+}
+
+/* line 255, components.scss */
+.main-picture--content__buttons {
+  margin-top: 25px;
+}
+
+/* line 259, components.scss */
+.statistics-separator {
+  position: relative;
+}
+/* line 261, components.scss */
+.statistics-separator::after {
+  display: block;
+  top: -2rem;
+  left: calc(50% - 18px);
+  position: absolute;
+  content: '';
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: rgba(108, 247, 240, 0.2);
+  -webkit-transition: background .15s ease-in-out;
+  transition: background .15s ease-in-out;
+}
+/* line 274, components.scss */
+.statistics-separator::before {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  position: relative;
+  top: -2.5rem;
+  left: calc(50% - 28px);
+  opacity: .6;
+  margin-top: .5rem;
+  content: url(../components/assets/investing.svg);
+}
+
+/* line 287, components.scss */
+.middle-top {
+  font-family: 'DejaVu Sans';
+}
+/* line 289, components.scss */
+.middle-top h1 {
+  color: #1cb0d5;
+  text-align: center;
+  font-size: 32px;
+}
+/* line 294, components.scss */
+.middle-top p {
+  color: #424343;
+  text-align: center;
+}
+
+/* line 300, components.scss */
+.middle-bottom--content-bold {
+  font-weight: bold;
+}
+
+/* line 304, components.scss */
+.middle-asking {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #e5f8fd;
+  padding-bottom: 50px;
+}
+
+/* line 313, components.scss */
+.middle-bottom--content {
+  width: 50%;
+  font-family: 'DejaVu Sans';
+  font-size: 13px;
+  color: #424343;
+}
+
+/* line 320, components.scss */
+.question-image-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 328, components.scss */
+.middle-bottom--content__tick {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 29px;
+}
+/* line 334, components.scss */
+.middle-bottom--content__tick p {
+  margin: 3px 0;
+}
+
+/* line 339, components.scss */
+.content-tick {
+  width: 17px;
+  margin-right: 15px;
+  position: relative;
+  top: 3px;
+}
+
+/* line 346, components.scss */
+.contact-wrapper {
+  margin-top: 60px;
+  position: relative;
+  border: 2px solid #55d3ef;
+}
+
+/* line 352, components.scss */
+.img-wrapper {
+  background: #fff;
+  position: absolute;
+  left: calc(50% - 17.5px);
+  top: -5px;
+  width: 55px;
+  height: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 364, components.scss */
+.img-wrapper img {
+  width: 40px;
+}
+/* line 368, components.scss */
+.img-wrapper::after {
+  display: block;
+  top: -22px;
+  left: calc(50% - 18px);
+  position: absolute;
+  content: '';
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: rgba(108, 247, 240, 0.2);
+}
+
+/* line 381, components.scss */
+.bottom-contact-form {
+  display: flex;
+  flex-direction: row;
+  background: #e5f8fd;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0 0 5px;
+  padding: 20px 20px 10px;
+}
+/* line 390, components.scss */
+.bottom-contact-form p {
+  color: #424343;
+  font-family: 'DejaVu Sans';
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+/* line 399, components.scss */
+.contact-us-header {
+  margin-top: 80px;
+  font-family: 'DejaVu Sans';
+  color: #1cb0d5;
+  text-align: center;
+}
+
+/* line 406, components.scss */
+.index-contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* line 410, components.scss */
+.index-contact input {
+  height: 40px;
+  padding: 0 10px;
+}
+/* line 414, components.scss */
+.index-contact input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-style: italic;
+}
+/* line 417, components.scss */
+.index-contact input::-moz-placeholder {
+  /* Firefox 19+ */
+  font-style: italic;
+}
+/* line 420, components.scss */
+.index-contact input:-ms-input-placeholder {
+  /* IE 10+ */
+  font-style: italic;
+}
+/* line 423, components.scss */
+.index-contact input:-moz-placeholder {
+  /* Firefox 18- */
+  font-style: italic;
+}
+/* line 427, components.scss */
+.index-contact button {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: 'DejaVu Sans';
+  color: #424343;
+  height: 44px;
+  width: 90px;
+  background: #e5f8fd;
+  border-left: none;
+  border-top: 2px solid #55d3ef;
+  border-bottom: 2px solid #55d3ef;
+  border-right: 2px solid #55d3ef;
+}
+
+/* line 442, components.scss */
+.input-text {
+  border: 2px solid #55d3ef;
+  width: 100px;
+}
+
+/* line 447, components.scss */
+.input-phone {
+  border-left: none;
+  border-top: 2px solid #55d3ef;
+  border-bottom: 2px solid #55d3ef;
+  border-right: 2px solid #55d3ef;
+}
+
+/* line 454, components.scss */
+footer {
+  margin-top: 100px;
+  padding-bottom: 20px;
+  background: #222222;
+  color: #fff;
+  font-family: 'DejaVu Sans';
+}
+/* line 461, components.scss */
+footer a {
+  color: #fff;
+}
+
+/* line 466, components.scss */
+.footer-container {
+  display: Flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* line 474, components.scss */
+.footer--left__top {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+}
+
+/* line 480, components.scss */
+.footer-small {
+  font-size: 16px;
+}
+
+/* line 484, components.scss */
+.footer--left__bottom {
+  width: 50%;
+  text-align: right;
+}
+
+/* line 489, components.scss */
+.footer-people {
+  width: 170px;
+  margin-right: 50px;
+}
+
+/* line 494, components.scss */
+.footer--right {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+}
+/* line 500, components.scss */
+.footer--right ul {
+  margin-top: 0;
+}
+/* line 502, components.scss */
+.footer--right ul li {
+  font-size: 14px;
+  text-align: center;
+  margin: 15px 0;
+  text-transform: capitalize;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+/* line 513, components.scss */
+.footer--left__top {
+  width: 100%;
+}
+
+/* line 517, components.scss */
+.footer-second {
+  color: #fff;
+}
+
+/* line 521, components.scss */
+.services-main--content {
+  display: flex;
+  flex-direction: column;
+  font-family: 'DejaVu Sans';
+  width: 54%;
+}
+/* line 527, components.scss */
+.services-main--content section {
+  margin-bottom: 50px;
+}
+/* line 530, components.scss */
+.services-main--content section:first-of-type {
+  margin-top: 10px;
+}
+
+/* line 536, components.scss */
+.services-main-header {
+  font-family: 'DejaVu Sans';
+  text-align: center;
+  margin: 100px auto 20px;
+  height: 20px;
+}
+
+/* line 543, components.scss */
+.text-bcg {
+  width: fit-content;
+  background: #55d3ef;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* line 551, components.scss */
+.aside-left {
+  width: 18%;
+}
+
+/* line 559, components.scss */
+.aside-left--list {
+  margin: 0;
+  padding: 0;
+}
+/* line 563, components.scss */
+.aside-left--list li {
+  list-style-type: none;
+  padding: 10px 0;
+}
+/* line 567, components.scss */
+.aside-left--list li:first-of-type {
+  border-bottom: 1px solid #cccccc;
+}
+/* line 570, components.scss */
+.aside-left--list li a {
+  font-family: 'DejaVu Sans';
+  font-size: 14px;
+}
+
+/* line 577, components.scss */
+.line-break {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  line-height: 20px;
+}
+/* line 582, components.scss */
+.line-break::after {
+  content: '';
+  z-index: -1;
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 22px;
+  bottom: 0;
+  background: #55d3ef;
+}
+/* line 594, components.scss */
+.line-break::before {
+  content: '';
+  z-index: -1;
+  display: block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 22px;
+  background: #55d3ef;
+}
+
+/* line 607, components.scss */
+.section-header {
+  margin: 0;
+  height: 16px;
+  font-family: 'DejaVu Sans';
+}
+
+/* line 613, components.scss */
+.aside-right {
+  width: 25%;
+  font-family: 'DejaVu Sans';
+}
+/* line 616, components.scss */
+.aside-right form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 20px 66px 0 rgba(34, 48, 73, 0.2);
+}
+/* line 626, components.scss */
+.aside-right form h1 {
+  margin-top: 0;
+}
+/* line 630, components.scss */
+.aside-right form input {
+  width: calc(100% - 19px);
+  padding: 7px;
+  margin: 4px 0;
+}
+/* line 636, components.scss */
+.aside-right form button {
+  margin: 25px auto 0;
+  border: 0;
+  padding: 15px;
+  background: #1cb0d5;
+  color: #fff;
+  font-weight: bold;
+}
+/* line 645, components.scss */
+.aside-right form p {
+  color: #a0a0a0;
+  font-size: 10px;
+}
+
+/* line 652, components.scss */
+.services-asides {
+  margin-top: 75px;
+}
+
+/* line 656, components.scss */
+.column-element-img {
+  width: 60px;
+}
+
+/* line 660, components.scss */
+.hdww-content {
+  padding: 0 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 668, components.scss */
+.hdww-header {
+  text-align: center;
+}
+
+/* line 672, components.scss */
+.hdww-columns {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* line 680, components.scss */
+.column-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 687, components.scss */
+.hdww-line {
+  position: absolute;
+  width: 70%;
+  border-bottom: 2px dashed #1cb0d5;
+  top: 55%;
+  left: 16%;
+  z-index: -1;
+}
+
+/* line 696, components.scss */
+.hdww-btn {
+  margin: 10px auto;
+}
+
+/* line 701, components.scss */
+.ghn-form textarea, .ghn-form .ghn-input {
+  margin: 5px 0;
+  padding: 10px;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+/* line 710, components.scss */
+.ghn-form textarea {
+  height: 150px;
+}
+
+/* line 715, components.scss */
+.ghn-content {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* line 724, components.scss */
+.ghn-form-wrapper {
+  width: 100%;
+}
+
+/* line 728, components.scss */
+.ghn-form-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 733, components.scss */
+.ghn-submit {
+  font-family: DejaVu Sans;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 10px 20px!important;
+  border-radius: 3px;
+  background: #1cb0d5;
+  color: #fff!important;
+  transition: all 0.1s ease-out;
+  border: none;
+  float: right;
+}
