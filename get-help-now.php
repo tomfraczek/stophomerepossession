@@ -10,68 +10,85 @@ $firstName = $lastName = $email = $phone = $lender = $message = "";
 $succMsg = '';
 $success = true;
 
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+    }
+
+    
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["firstName"])) {
         $firstNameErr = "First name is required";
+        $success = false;
       } else {
         $firstName = test_input($_POST["firstName"]);
         // check if firstName only contains letters and whitespace
         if (!preg_match("/^[a-zA-Z ]*$/",$firstName)) {
           $firstNameErr = "Only letters and white space allowed"; 
+          $success = false;
         }
       }
   
       if (empty($_POST["lastName"])) {
           $lastNameErr = "Last name is required";
+          $success = false;
         } else {
           $lastName = test_input($_POST["lastName"]);
           // check if lastName only contains letters and whitespace
           if (!preg_match("/^[a-zA-Z ]*$/",$lastName)) {
             $lastNameErr = "Only letters and white space allowed"; 
+            $success = false;
           }
         }
   
       if (empty($_POST["email"])) {
           $emailErr = "Email is required";
+          $success = false;
         } else {
           $email = test_input($_POST["email"]);
           // check if e-mail address is well-formed
           if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $emailErr = "Invalid email format"; 
+            $success = false;
           }
         }
   
       if (empty($_POST["phone"])) {
           $phoneErr = "Phone number is required";
+          $success = false;
       } else {
-      $email = test_input($_POST["email"]);
+      $phone = test_input($_POST["phone"]);
       // check if phone number is well-formed
-      if (preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/", $phone)) {
+      if (!filter_var($phone, FILTER_SANITIZE_NUMBER_INT)) {
           $phoneErr = "Invalid phone format"; 
+          $success = false;
           }
       }
   
       if (empty($_POST["lender"])) {
           $lenderErr = "Lender's name is required";
+          $success = false;
       } else {
           $lender = test_input($_POST["lender"]);
       // check if lender only contains letters and whitespace
-      if (!preg_match("/^[a-zA-Z ]*$/",$lender)) {
-          $lenderErr = "Only letters and white space allowed"; 
+      if (!preg_match("/^[a-zA-Z ]*$/", $lender)) {
+          $lenderErr = "Only letters and white space allowed";
+          $success = false; 
           }
       }
   
       if (empty($_POST["message"])) {
           $messageErr = "Short description is required";
+          $success = false;
       } else {
           $message = test_input($_POST["message"]);
       }
-  
-      function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
+
+      if($success === true){
+          $succMsg = 'udalo sie zajebiscie';
       }
 }
 
@@ -99,18 +116,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="ghn-form-left">
                         <input type="text" class="recaptcha-input" id="g-recaptcha-response" name="g-recaptcha-response" />
                         <div class="validate-error"><?php echo $firstNameErr;?></div>
-                        <input class="ghn-input" type="text" id="name" name="firstName" placeholder="First name" />
+                        <input class="ghn-input" value="<?php echo isset($_POST["firstName"]) ? $_POST["firstName"] : ''; ?>" type="text" id="name" name="firstName" placeholder="First name" />
+
                         <div class="validate-error"><?php echo $lastNameErr;?></div>
-                        <input class="ghn-input" type="text" id="mail" name="lastName" placeholder="Last name" />
+                        <input class="ghn-input" value="<?php echo isset($_POST["lastName"]) ? $_POST["lastName"] : ''; ?>" type="text" name="lastName" placeholder="Last name" />
+
                         <div class="validate-error"><?php echo $emailErr;?></div>
-                        <input class="ghn-input" type="email" id="mail" name="email" placeholder="Email address" />
+                        <input class="ghn-input" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : ''; ?>" type="email" name="email" placeholder="Email address" />
+
                         <div class="validate-error"><?php echo $phoneErr;?></div>
-                        <input class="ghn-input" type="tel" id="mail" name="phone" placeholder="Phone number" />
+                        <input class="ghn-input" value="<?php echo isset($_POST["phone"]) ? $_POST["phone"] : ''; ?>" type="tel" name="phone" placeholder="Phone number" />
+
                         <div class="validate-error"><?php echo $lenderErr;?></div>
-                        <input class="ghn-input" type="text" id="mail" name="lander" placeholder="Lender's name" />
+                        <input class="ghn-input" value="<?php echo isset($_POST["lender"]) ? $_POST["lender"] : ''; ?>" type="text" name="lender" placeholder="Lender's name" />
                     </div>
                     <div class="validate-error"><?php echo $messageErr;?></div>
-                    <textarea id="msg" name="message" placeholder="Short description"></textarea>
+                    <textarea id="msg" name="message" placeholder="Short description"><?php echo isset($_POST["message"]) ? $_POST["message"] : ''; ?></textarea>
                 </div>
                 <div class="form-bellow">
                     <div class="validate-error"><?php echo $captchaErr;?></div>
