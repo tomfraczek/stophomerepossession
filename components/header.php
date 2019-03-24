@@ -1,9 +1,4 @@
-<?php
 
-define('SITE_KEY', '6LfdKZgUAAAAAGf4mP5YNXKPULWzWG5LSc49KjaR');
-define('SECRET_KEY', '6LfdKZgUAAAAAAB17eBeJspSFVrxp8WZDWGJvzi-');
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,11 +11,7 @@ define('SECRET_KEY', '6LfdKZgUAAAAAAB17eBeJspSFVrxp8WZDWGJvzi-');
 
     <title>Stop Home Repossesion</title>
 
-    <script src="https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY ?>"></script>
-    <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5616141.js"></script>
-    <!-- End of HubSpot Embed Code -->
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </head>
 <body>
