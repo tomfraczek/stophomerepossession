@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Delius|Dhurjati");
 /* line 3, components.scss */
 header {
-  box-shadow: 0 5px 10px 0 rgba(34, 48, 73, 0);
+  box-shadow: 0 5px 10px 0 rgba(34, 48, 73, 0.2);
 }
 
 /* line 7, components.scss */
@@ -129,7 +129,7 @@ header {
   padding: 0;
   width: max-content;
   background: #fff;
-  box-shadow: 0 20px 66px 0 rgba(34, 48, 73, 0);
+  box-shadow: 0 20px 66px 0 rgba(34, 48, 73, 0.2);
   border-radius: 3px;
 }
 /* line 122, components.scss */
@@ -212,7 +212,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 /* line 202, components.scss */
@@ -298,7 +298,7 @@ header {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background: rgba(108, 247, 240, 0);
+  background: rgba(108, 247, 240, 0.2);
   -webkit-transition: background .15s ease-in-out;
   transition: background .15s ease-in-out;
 }
@@ -415,7 +415,7 @@ header {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background: rgba(108, 247, 240, 0);
+  background: rgba(108, 247, 240, 0.2);
 }
 
 /* line 381, components.scss */
@@ -690,7 +690,7 @@ footer a {
   border: 1px solid #cccccc;
   border-radius: 5px;
   padding: 20px;
-  box-shadow: 0 20px 66px 0 rgba(34, 48, 73, 0);
+  box-shadow: 0 20px 66px 0 rgba(34, 48, 73, 0.2);
 }
 /* line 626, components.scss */
 .aside-right form h1 {
@@ -820,14 +820,22 @@ footer a {
   transition: all 0.1s ease-out;
   border: none;
   float: right;
+  width: 100%;
 }
 
-/* line 742, components.scss */
+/* line 743, components.scss */
 .recaptcha-input {
   display: none;
 }
 
-/* line 746, components.scss */
+/* line 747, components.scss */
 .validate-error {
   color: #ff0000;
+}
+
+/* line 751, components.scss */
+.form-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }

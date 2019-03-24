@@ -737,6 +737,7 @@ footer{
     transition: all 0.1s ease-out;
     border: none; 
     float:right;
+    width: 100%;
 }
 
 .recaptcha-input{
@@ -745,4 +746,10 @@ footer{
 
 .validate-error{
     color: #ff0000;
+}
+
+.form-bottom{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
