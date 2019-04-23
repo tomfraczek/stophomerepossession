@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Delius|Dhurjati");
+@import url("https://fonts.googleapis.com/css?family=Robotos");
 /* line 3, components.scss */
 header {
   box-shadow: 0 5px 10px 0 rgba(34, 48, 73, 0.2);
@@ -200,9 +201,10 @@ header {
   width: 100%;
   height: 500px;
   overflow: hidden;
+  top: -7px;
 }
 
-/* line 188, components.scss */
+/* line 189, components.scss */
 .main-picture--content {
   position: absolute;
   top: 0;
@@ -215,7 +217,7 @@ header {
   background: rgba(255, 255, 255, 0.8);
 }
 
-/* line 202, components.scss */
+/* line 203, components.scss */
 .main-picture--content__header {
   font-family: 'DejaVu Sans';
   color: #1cb0d5;
@@ -223,29 +225,29 @@ header {
   margin-top: -30px;
 }
 
-/* line 209, components.scss */
+/* line 210, components.scss */
 .header--grey-word {
   color: #676868;
 }
 
-/* line 213, components.scss */
+/* line 214, components.scss */
 .main-picture--content__text {
   margin-left: 100px;
   margin: auto;
   text-align: center;
 }
-/* line 218, components.scss */
+/* line 219, components.scss */
 .main-picture--content__text p {
-  font-family: 'DejaVu Sans';
+  font-family: 'Roboto', sans-serif;
   color: #353536;
   margin: 0;
   letter-spacing: 1px;
   word-spacing: 0px;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 17px;
 }
 
-/* line 229, components.scss */
+/* line 230, components.scss */
 .button {
   font-family: DejaVu Sans;
   text-transform: uppercase;
@@ -256,39 +258,40 @@ header {
   transition: all 0.2s ease-out;
 }
 
-/* line 234, components.scss */
+/* line 235, components.scss */
 .help {
   background: #1cb0d5;
   color: #fff;
 }
-/* line 238, components.scss */
+/* line 239, components.scss */
 .help:hover {
   background: #fff;
   color: #1cb0d5;
 }
 
-/* line 244, components.scss */
+/* line 245, components.scss */
 .quick {
   background: #fbd415;
   color: #fff;
   margin-left: 25px;
 }
-/* line 249, components.scss */
+/* line 250, components.scss */
 .quick:hover {
   background: #fff;
   color: #fbd415;
 }
 
-/* line 255, components.scss */
+/* line 256, components.scss */
 .main-picture--content__buttons {
   margin-top: 25px;
 }
 
-/* line 259, components.scss */
+/* line 260, components.scss */
 .statistics-separator {
   position: relative;
+  top: -7px;
 }
-/* line 261, components.scss */
+/* line 263, components.scss */
 .statistics-separator::after {
   display: block;
   top: -2rem;
@@ -302,7 +305,7 @@ header {
   -webkit-transition: background .15s ease-in-out;
   transition: background .15s ease-in-out;
 }
-/* line 274, components.scss */
+/* line 276, components.scss */
 .statistics-separator::before {
   display: block;
   width: 3.5rem;
@@ -315,28 +318,28 @@ header {
   content: url(../components/assets/investing.svg);
 }
 
-/* line 287, components.scss */
+/* line 289, components.scss */
 .middle-top {
   font-family: 'DejaVu Sans';
 }
-/* line 289, components.scss */
+/* line 291, components.scss */
 .middle-top h1 {
   color: #1cb0d5;
   text-align: center;
   font-size: 32px;
 }
-/* line 294, components.scss */
+/* line 296, components.scss */
 .middle-top p {
   color: #424343;
   text-align: center;
 }
 
-/* line 300, components.scss */
+/* line 302, components.scss */
 .middle-bottom--content-bold {
   font-weight: bold;
 }
 
-/* line 304, components.scss */
+/* line 306, components.scss */
 .middle-asking {
   display: flex;
   flex-direction: row;
@@ -346,7 +349,7 @@ header {
   padding-bottom: 50px;
 }
 
-/* line 313, components.scss */
+/* line 315, components.scss */
 .middle-bottom--content {
   width: 50%;
   font-family: 'DejaVu Sans';
@@ -354,7 +357,7 @@ header {
   color: #424343;
 }
 
-/* line 320, components.scss */
+/* line 322, components.scss */
 .question-image-wrapper {
   width: 50%;
   display: flex;
@@ -362,19 +365,19 @@ header {
   align-items: center;
 }
 
-/* line 328, components.scss */
+/* line 330, components.scss */
 .middle-bottom--content__tick {
   display: flex;
   flex-direction: column;
   position: relative;
   right: 29px;
 }
-/* line 334, components.scss */
+/* line 336, components.scss */
 .middle-bottom--content__tick p {
   margin: 3px 0;
 }
 
-/* line 339, components.scss */
+/* line 341, components.scss */
 .content-tick {
   width: 17px;
   margin-right: 15px;
@@ -382,14 +385,14 @@ header {
   top: 3px;
 }
 
-/* line 346, components.scss */
+/* line 348, components.scss */
 .contact-wrapper {
   margin-top: 60px;
   position: relative;
   border: 2px solid #55d3ef;
 }
 
-/* line 352, components.scss */
+/* line 354, components.scss */
 .img-wrapper {
   background: #fff;
   position: absolute;
@@ -401,11 +404,11 @@ header {
   justify-content: center;
   align-items: center;
 }
-/* line 364, components.scss */
+/* line 366, components.scss */
 .img-wrapper img {
   width: 40px;
 }
-/* line 368, components.scss */
+/* line 370, components.scss */
 .img-wrapper::after {
   display: block;
   top: -22px;
@@ -418,7 +421,7 @@ header {
   background: rgba(108, 247, 240, 0.2);
 }
 
-/* line 381, components.scss */
+/* line 383, components.scss */
 .bottom-contact-form {
   display: flex;
   flex-direction: row;
@@ -428,7 +431,7 @@ header {
   margin: 5px 0 0 5px;
   padding: 20px 20px 10px;
 }
-/* line 390, components.scss */
+/* line 392, components.scss */
 .bottom-contact-form p {
   color: #424343;
   font-family: 'DejaVu Sans';
@@ -437,7 +440,7 @@ header {
   margin-left: 20px;
 }
 
-/* line 399, components.scss */
+/* line 401, components.scss */
 .contact-us-header {
   margin-top: 80px;
   font-family: 'DejaVu Sans';
@@ -445,38 +448,38 @@ header {
   text-align: center;
 }
 
-/* line 406, components.scss */
+/* line 408, components.scss */
 .index-contact {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-/* line 410, components.scss */
+/* line 412, components.scss */
 .index-contact input {
   height: 40px;
   padding: 0 10px;
 }
-/* line 414, components.scss */
+/* line 416, components.scss */
 .index-contact input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   font-style: italic;
 }
-/* line 417, components.scss */
+/* line 419, components.scss */
 .index-contact input::-moz-placeholder {
   /* Firefox 19+ */
   font-style: italic;
 }
-/* line 420, components.scss */
+/* line 422, components.scss */
 .index-contact input:-ms-input-placeholder {
   /* IE 10+ */
   font-style: italic;
 }
-/* line 423, components.scss */
+/* line 425, components.scss */
 .index-contact input:-moz-placeholder {
   /* Firefox 18- */
   font-style: italic;
 }
-/* line 427, components.scss */
+/* line 429, components.scss */
 .index-contact button {
   text-transform: uppercase;
   font-weight: 700;
@@ -491,13 +494,13 @@ header {
   border-right: 2px solid #55d3ef;
 }
 
-/* line 442, components.scss */
+/* line 444, components.scss */
 .input-text {
   border: 2px solid #55d3ef;
   width: 100px;
 }
 
-/* line 447, components.scss */
+/* line 449, components.scss */
 .input-phone {
   border-left: none;
   border-top: 2px solid #55d3ef;
@@ -505,7 +508,7 @@ header {
   border-right: 2px solid #55d3ef;
 }
 
-/* line 454, components.scss */
+/* line 456, components.scss */
 footer {
   margin-top: 100px;
   padding-bottom: 20px;
@@ -513,12 +516,12 @@ footer {
   color: #fff;
   font-family: 'DejaVu Sans';
 }
-/* line 461, components.scss */
+/* line 463, components.scss */
 footer a {
   color: #fff;
 }
 
-/* line 466, components.scss */
+/* line 468, components.scss */
 .footer-container {
   display: Flex;
   flex-wrap: wrap;
@@ -527,41 +530,41 @@ footer a {
   justify-content: space-between;
 }
 
-/* line 474, components.scss */
+/* line 476, components.scss */
 .footer--left__top {
   display: flex;
   flex-direction: row;
   align-content: flex-end;
 }
 
-/* line 480, components.scss */
+/* line 482, components.scss */
 .footer-small {
   font-size: 16px;
 }
 
-/* line 484, components.scss */
+/* line 486, components.scss */
 .footer--left__bottom {
   width: 50%;
   text-align: right;
 }
 
-/* line 489, components.scss */
+/* line 491, components.scss */
 .footer-people {
   width: 170px;
   margin-right: 50px;
 }
 
-/* line 494, components.scss */
+/* line 496, components.scss */
 .footer--right {
   width: 50%;
   display: flex;
   flex-direction: row;
 }
-/* line 500, components.scss */
+/* line 501, components.scss */
 .footer--right ul {
   margin-top: 0;
 }
-/* line 502, components.scss */
+/* line 503, components.scss */
 .footer--right ul li {
   font-size: 14px;
   text-align: center;
@@ -571,33 +574,33 @@ footer a {
   font-weight: bold;
 }
 
-/* line 513, components.scss */
+/* line 514, components.scss */
 .footer--left__top {
   width: 100%;
 }
 
-/* line 517, components.scss */
+/* line 518, components.scss */
 .footer-second {
   color: #fff;
 }
 
-/* line 521, components.scss */
+/* line 522, components.scss */
 .services-main--content {
   display: flex;
   flex-direction: column;
   font-family: 'DejaVu Sans';
   width: 54%;
 }
-/* line 527, components.scss */
+/* line 528, components.scss */
 .services-main--content section {
   margin-bottom: 50px;
 }
-/* line 530, components.scss */
+/* line 531, components.scss */
 .services-main--content section:first-of-type {
   margin-top: 10px;
 }
 
-/* line 536, components.scss */
+/* line 537, components.scss */
 .services-main-header {
   font-family: 'DejaVu Sans';
   text-align: center;
@@ -605,7 +608,7 @@ footer a {
   height: 20px;
 }
 
-/* line 543, components.scss */
+/* line 544, components.scss */
 .text-bcg {
   width: fit-content;
   background: #55d3ef;
@@ -613,39 +616,50 @@ footer a {
   align-items: flex-end;
 }
 
-/* line 551, components.scss */
+/* line 552, components.scss */
 .aside-left {
   width: 18%;
 }
 
-/* line 559, components.scss */
+/* line 558, components.scss */
 .aside-left--list {
   margin: 0;
   padding: 0;
 }
-/* line 563, components.scss */
+/* line 562, components.scss */
 .aside-left--list li {
   list-style-type: none;
   padding: 10px 0;
+  border-bottom: 1px solid #cccccc;
 }
 /* line 567, components.scss */
 .aside-left--list li:first-of-type {
-  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
 }
 /* line 570, components.scss */
 .aside-left--list li a {
   font-family: 'DejaVu Sans';
-  font-size: 14px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #353536;
+}
+/* line 577, components.scss */
+.aside-left--list li a:hover {
+  cursor: pointer;
+  width: fit-content;
+  background: #55d3ef;
+  padding-right: 10px;
 }
 
-/* line 577, components.scss */
+/* line 587, components.scss */
 .line-break {
   display: flex;
   align-items: flex-end;
   position: relative;
   line-height: 20px;
 }
-/* line 582, components.scss */
+/* line 592, components.scss */
 .line-break::after {
   content: '';
   z-index: -1;
@@ -657,7 +671,7 @@ footer a {
   bottom: 0;
   background: #55d3ef;
 }
-/* line 594, components.scss */
+/* line 604, components.scss */
 .line-break::before {
   content: '';
   z-index: -1;
@@ -670,19 +684,22 @@ footer a {
   background: #55d3ef;
 }
 
-/* line 607, components.scss */
+/* line 617, components.scss */
 .section-header {
   margin: 0;
   height: 16px;
   font-family: 'DejaVu Sans';
 }
 
-/* line 613, components.scss */
+/* line 623, components.scss */
 .aside-right {
   width: 25%;
   font-family: 'DejaVu Sans';
+  position: sticky;
+  right: 0;
+  top: 10px;
 }
-/* line 616, components.scss */
+/* line 629, components.scss */
 .aside-right form {
   display: flex;
   flex-direction: column;
@@ -692,17 +709,17 @@ footer a {
   padding: 20px;
   box-shadow: 0 20px 66px 0 rgba(34, 48, 73, 0.2);
 }
-/* line 626, components.scss */
+/* line 639, components.scss */
 .aside-right form h1 {
   margin-top: 0;
 }
-/* line 630, components.scss */
+/* line 643, components.scss */
 .aside-right form input {
   width: calc(100% - 19px);
   padding: 7px;
   margin: 4px 0;
 }
-/* line 636, components.scss */
+/* line 649, components.scss */
 .aside-right form button {
   margin: 25px auto 0;
   border: 0;
@@ -711,23 +728,22 @@ footer a {
   color: #fff;
   font-weight: bold;
 }
-/* line 645, components.scss */
+/* line 658, components.scss */
 .aside-right form p {
   color: #a0a0a0;
   font-size: 10px;
 }
-
-/* line 652, components.scss */
-.services-asides {
-  margin-top: 75px;
+/* line 663, components.scss */
+.aside-right img {
+  width: 85%;
 }
 
-/* line 656, components.scss */
+/* line 668, components.scss */
 .column-element-img {
   width: 60px;
 }
 
-/* line 660, components.scss */
+/* line 672, components.scss */
 .hdww-content {
   padding: 0 150px;
   display: flex;
@@ -736,12 +752,15 @@ footer a {
   justify-content: space-between;
 }
 
-/* line 668, components.scss */
+/* line 680, components.scss */
 .hdww-header {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
 }
 
-/* line 672, components.scss */
+/* line 687, components.scss */
 .hdww-columns {
   position: relative;
   display: flex;
@@ -749,15 +768,19 @@ footer a {
   justify-content: space-between;
 }
 
-/* line 680, components.scss */
+/* line 695, components.scss */
 .column-element {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
+/* line 701, components.scss */
+.column-element h1 {
+  color: #fc5370;
+}
 
-/* line 687, components.scss */
+/* line 706, components.scss */
 .hdww-line {
   position: absolute;
   width: 70%;
@@ -767,12 +790,13 @@ footer a {
   z-index: -1;
 }
 
-/* line 696, components.scss */
+/* line 715, components.scss */
 .hdww-btn {
   margin: 10px auto;
+  background: #fc5370;
 }
 
-/* line 701, components.scss */
+/* line 721, components.scss */
 .ghn-form textarea, .ghn-form .ghn-input {
   margin: 5px 0;
   padding: 10px;
@@ -781,12 +805,12 @@ footer a {
   box-sizing: border-box;
   font-family: Arial;
 }
-/* line 710, components.scss */
+/* line 730, components.scss */
 .ghn-form textarea {
   height: 150px;
 }
 
-/* line 715, components.scss */
+/* line 735, components.scss */
 .ghn-content {
   width: 70%;
   margin: auto;
@@ -796,18 +820,18 @@ footer a {
   justify-content: space-between;
 }
 
-/* line 724, components.scss */
+/* line 744, components.scss */
 .ghn-form-wrapper {
   width: 100%;
 }
 
-/* line 728, components.scss */
+/* line 748, components.scss */
 .ghn-form-input-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-/* line 733, components.scss */
+/* line 753, components.scss */
 .ghn-submit {
   font-family: DejaVu Sans;
   text-transform: uppercase;
@@ -823,19 +847,58 @@ footer a {
   width: 100%;
 }
 
-/* line 743, components.scss */
+/* line 763, components.scss */
 .recaptcha-input {
   display: none;
 }
 
-/* line 747, components.scss */
+/* line 767, components.scss */
 .validate-error {
   color: #ff0000;
 }
 
-/* line 751, components.scss */
+/* line 771, components.scss */
 .form-bottom {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+/* line 777, components.scss */
+.about-icon {
+  width: 60px;
+  float: left;
+  margin-right: 15px;
+}
+
+/* line 784, components.scss */
+section p {
+  text-align: justify;
+}
+
+/* line 789, components.scss */
+.main-content {
+  width: 65%;
+  margin: auto;
+}
+
+/* line 794, components.scss */
+.red {
+  background: #fc5370;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 64px;
+  margin-left: 5px;
+}
+
+/* line 804, components.scss */
+.header-pic {
+  width: 125px;
+  margin: auto;
+}
+/* line 808, components.scss */
+.header-pic img {
+  width: 100%;
 }

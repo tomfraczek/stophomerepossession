@@ -2,18 +2,14 @@
 
 <h1 class="services-main-header text-bcg">Get to Know Us</h1>
 
+<div class="header-pic">
+<img src="./components/assets/twoPeople.png" alt="picture">
+</div>
+
 <div class="container services-asides">
 
-    <aside class="aside-left">
-        <ul class="aside-left--list">
-            <li><a href="" class="line-break">About Us</a></li>
-            <li><a href="" class="line-break">Our Values</a></li>
-            <li><a href="" class="line-break">What We Do & Don’t Do</a></li>
-        </ul>
-    </aside>
-
-    <main class="services-main--content">
-        <section>
+    <main class="main-content services-main--content">
+        <section id='about'>
             <h1 class="section-header text-bcg">About Us</h1>
 
             <p>Stop repossession has been created to help homeowners who are in difficulties to repay their mortgage or are facing repossession or eviction. </p>
@@ -22,28 +18,28 @@
 
         </section>
 
-        <section>
+        <section id='values'>
             <h1 class="section-header text-bcg">Our Values</h1>
 
             <p>
-                <img src="" alt="picture">
+                <img class='about-icon' src="./components/assets/empathy.svg" alt="picture">
                 Empathy- At Stop repossesion we sympathise with all Homeowners. We know how difficult this phase can be and that’s very reason why we will go the extra mile to help you
             </p>
 
             <p>
-                <img src="" alt="picture">
+                <img class='about-icon' src="./components/assets/up-arrows.svg" alt="picture">
                 Positivity – When facing repossession, it is very difficult to keep 
                 calm and carry on and often, many homeowners can quickly feel alone and lost. At stop repossession we will always stay positive and act quickly to solve your situation.
             </p>
 
             <p>
-                <img src="" alt="picture">
+                <img class='about-icon' src="./components/assets/honest.svg" alt="picture">
                 Honesty – To help you go through this difficult time, our team of experts will often come up with more than one solutions. And in order to find the one that ticks as many boxes as possible, our team will treat you with honesty and transparency
             </p>
 
         </section>
 
-        <section>
+        <section id='what'>
             <h1 class="section-header text-bcg">What We Do & Don’t Do</h1>
 
             <p>What We Do - Being a homeowner has its pros & cons but 
@@ -54,10 +50,6 @@
 
         </section>
     </main>
-
-    <aside class="aside-right">
-        <img src="" alt="picture">
-    </aside>
 </div>
 
 

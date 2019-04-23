@@ -7,8 +7,8 @@
             
             <div class="main-picture--content__text">
                 <h1 class="main-picture--content__header">There is a <span class="header--grey-word">solution</span><br/>to every problem</h1>
-                <p>Are you strugulin to repay your mortgage ?</p>
-                <p>Are you afraid that bank repossess your property ?</p>
+                <p>Are you strugling to repay your mortgage ?</p>
+                <p>Are you afraid that banks repossess your property ?</p>
                 <p>Are you looking for legal advice on how to avoid it ?</p>
                 
                 <div class="main-picture--content__buttons">

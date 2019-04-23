@@ -4,14 +4,7 @@
 
 <div class="container services-asides">
 
-    <aside class="aside-left">
-        <ul class="aside-left--list">
-            <li><a href="" class="line-break">What is it & what does it mean?</a></li>
-            <li><a href="" class="line-break">How will we proceed to help you?</a></li>
-        </ul>
-    </aside>
-
-    <main class="services-main--content">
+    <main class="main-content services-main--content">
         <section>
             <h1 class="section-header text-bcg">What is it & what does it mean?</h1>
 

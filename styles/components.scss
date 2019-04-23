@@ -183,6 +183,7 @@ header{
     width: 100%;
     height: 500px;
     overflow: hidden;
+    top: -7px;
 }
 
 .main-picture--content{
@@ -216,12 +217,12 @@ header{
     text-align: center;
 
     p{
-        font-family: 'DejaVu Sans';
+        font-family: 'Roboto', sans-serif;
         color: #353536;
         margin: 0;
         letter-spacing: 1px;
         word-spacing: 0px;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 17px;
     }
 }
@@ -258,6 +259,7 @@ header{
 
 .statistics-separator{
     position: relative;
+    top: -7px;
     &::after{
         display: block;
         top: -2rem;
@@ -493,7 +495,6 @@ footer{
 
 .footer--right{
     width:50%;
-
     display: flex;
     flex-direction: row;
 
@@ -552,9 +553,7 @@ footer{
     width: 18%;
 }
 
-// .aside-right{
-//     width: 25%;
-// }
+
 
 .aside-left--list{
     margin: 0;
@@ -563,13 +562,24 @@ footer{
     li{
         list-style-type: none;
         padding: 10px 0;
+        border-bottom: 1px solid #cccccc;
 
         &:first-of-type{
-            border-bottom: 1px solid #cccccc;
+            border-top: 1px solid #cccccc;
         }
         a{
             font-family: 'DejaVu Sans';
-            font-size: 14px;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #353536;
+            
+            &:hover{
+                cursor: pointer;
+                width: fit-content;
+                background: #55d3ef;
+                padding-right: 10px;
+            }
         }
     }
 }
@@ -613,6 +623,9 @@ footer{
 .aside-right{
     width:25%;
     font-family: 'DejaVu Sans';
+    position: sticky;
+    right: 0;
+    top: 10px;
     form{
         display: flex;
         flex-direction: column;
@@ -647,10 +660,9 @@ footer{
             font-size: 10px;
         }
     }
-}
-
-.services-asides{
-    margin-top: 75px;
+    img{
+        width: 85%;
+    }
 }
 
 .column-element-img{
@@ -667,6 +679,9 @@ footer{
 
 .hdww-header{
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
 .hdww-columns{
@@ -682,6 +697,10 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    
+    h1{
+        color: $pinky;
+    }
 }
 
 .hdww-line{
@@ -695,6 +714,7 @@ footer{
 
 .hdww-btn{
     margin: 10px auto;
+    background: $pinky;
 }
 
 .ghn-form{
@@ -752,4 +772,40 @@ footer{
     display:flex;
     flex-direction: column;
     align-items: flex-end;
+}
+
+.about-icon{
+    width: 60px;
+    float: left;
+    margin-right: 15px;
+}
+
+section{
+    p{
+        text-align: justify
+    }
+}
+
+.main-content{
+    width:65%;
+    margin:auto;
+}
+
+.red{
+    background: $pinky;
+    height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 64px;
+    margin-left: 5px;
+}
+
+.header-pic{
+    width:125px;
+    margin: auto;
+
+    img{
+        width:100%;
+    }
 }

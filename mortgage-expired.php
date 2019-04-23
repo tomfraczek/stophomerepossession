@@ -4,14 +4,7 @@
 
 <div class="container services-asides">
 
-    <aside class="aside-left">
-        <ul class="aside-left--list">
-            <li><a href="" class="text-bcg">What is it?</a></li>
-            <li><a href="" class="line-break">Why can an expired mortgage be dangerous ?</a></li>
-        </ul>
-    </aside>
-
-    <main class="services-main--content">
+    <main class="main-content services-main--content">
         <section>
             <h1 class="section-header text-bcg">What is it?</h1>
 

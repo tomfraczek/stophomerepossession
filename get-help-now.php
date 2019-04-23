@@ -1,8 +1,20 @@
-<?php include './components/header.php'?>
-<?php
+<?php 
+include './components/header.php';
 
-define('SITE_KEY', '6LdkopkUAAAAAESNyGoVVixcLIfMsoGVLl7j-BuE');
-define('SECRET_KEY', '6LdkopkUAAAAAEjd9KdQIYD6ysbsmV9dzMuIIA9Y');
+require_once './recaptcha-master/src/autoload.php';
+$secret = '6LdkopkUAAAAAESNyGoVVixcLIfMsoGVLl7j-BuE';
+$recaptcha = new \ReCaptcha\ReCaptcha($secret);
+
+$gRecaptchaResponse = $_POST['g-recaptcha-response'];
+$remoteIp = $_SERVER['REMOTE_ADDR'];
+
+$recaptcha = new \ReCaptcha\ReCaptcha($secret);
+$resp = $recaptcha->setExpectedHostname('stophomerepossession.co.uk')
+                  ->verify($gRecaptchaResponse, $remoteIp);
+
+$SITE_KEY = '6LdkopkUAAAAAESNyGoVVixcLIfMsoGVLl7j-BuE';
+$SECRET_KEY = '6LdkopkUAAAAAEjd9KdQIYD6ysbsmV9dzMuIIA9Y';
+
 
 // define variables and set to empty values
 $firstNameErr = $lastNameErr = $emailErr = $phoneErr = $lenderErr = $messageErr = $captchaErr = "";
@@ -32,64 +44,81 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
       }
   
-      if (empty($_POST["lastName"])) {
-          $lastNameErr = "Last name is required";
-          $success = false;
-        } else {
-          $lastName = test_input($_POST["lastName"]);
-          // check if lastName only contains letters and whitespace
-          if (!preg_match("/^[a-zA-Z ]*$/",$lastName)) {
-            $lastNameErr = "Only letters and white space allowed"; 
-            $success = false;
-          }
+    if (empty($_POST["lastName"])) {
+        $lastNameErr = "Last name is required";
+        $success = false;
+    } else {
+        $lastName = test_input($_POST["lastName"]);
+        // check if lastName only contains letters and whitespace
+        if (!preg_match("/^[a-zA-Z ]*$/",$lastName)) {
+        $lastNameErr = "Only letters and white space allowed"; 
+        $success = false;
         }
-  
-      if (empty($_POST["email"])) {
-          $emailErr = "Email is required";
-          $success = false;
-        } else {
-          $email = test_input($_POST["email"]);
-          // check if e-mail address is well-formed
-          if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "Invalid email format"; 
-            $success = false;
-          }
-        }
-  
-      if (empty($_POST["phone"])) {
-          $phoneErr = "Phone number is required";
-          $success = false;
-      } else {
-      $phone = test_input($_POST["phone"]);
-      // check if phone number is well-formed
-      if (!filter_var($phone, FILTER_SANITIZE_NUMBER_INT)) {
-          $phoneErr = "Invalid phone format"; 
-          $success = false;
-          }
-      }
-  
-      if (empty($_POST["lender"])) {
-          $lenderErr = "Lender's name is required";
-          $success = false;
-      } else {
-          $lender = test_input($_POST["lender"]);
-      // check if lender only contains letters and whitespace
-      if (!preg_match("/^[a-zA-Z ]*$/", $lender)) {
-          $lenderErr = "Only letters and white space allowed";
-          $success = false; 
-          }
-      }
-  
-      if (empty($_POST["message"])) {
-          $messageErr = "Short description is required";
-          $success = false;
-      } else {
-          $message = test_input($_POST["message"]);
-      }
+    }
 
-      if($success === true){
-          $succMsg = 'udalo sie zajebiscie';
-      }
+    if (empty($_POST["email"])) {
+        $emailErr = "Email is required";
+        $success = false;
+    } else {
+        $email = test_input($_POST["email"]);
+        // check if e-mail address is well-formed
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $emailErr = "Invalid email format"; 
+        $success = false;
+        }
+    }
+
+    if (empty($_POST["phone"])) {
+        $phoneErr = "Phone number is required";
+        $success = false;
+    } else {
+    $phone = test_input($_POST["phone"]);
+    // check if phone number is well-formed
+    if (!filter_var($phone, FILTER_SANITIZE_NUMBER_INT)) {
+        $phoneErr = "Invalid phone format"; 
+        $success = false;
+        }
+    }
+
+    if (empty($_POST["lender"])) {
+        $lenderErr = "Lender's name is required";
+        $success = false;
+    } else {
+        $lender = test_input($_POST["lender"]);
+    // check if lender only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/", $lender)) {
+        $lenderErr = "Only letters and white space allowed";
+        $success = false; 
+        }
+    }
+
+    if (empty($_POST["message"])) {
+        $messageErr = "Short description is required";
+        $success = false;
+    } else {
+        $message = test_input($_POST["message"]);
+    }
+
+    $secret = "6LdkopkUAAAAAEjd9KdQIYD6ysbsmV9dzMuIIA9Y";
+
+    if ($resp->isSuccess()) {
+        $succMsg = 'success';
+    } else {
+        $succMsg = $resp->getErrorCodes();
+    }
+
+
+    
+    // $secret = "6LdkopkUAAAAAEjd9KdQIYD6ysbsmV9dzMuIIA9Y";
+    
+    
+  $firstName = test_input($_POST["firstName"]);
+  $lastName = test_input($_POST["lastName"]);
+  $email = test_input($_POST["email"]);
+  $phone = test_input($_POST["phone"]);
+  $lender = test_input($_POST["lender"]);
+  $message = test_input($_POST["message"]);
+
 }
 
 
@@ -108,7 +137,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>All fields are required</p>
 
         </section>
-
         <section class="ghn-form-wrapper">
             <?php echo $succMsg ?>
             <form class="ghn-form" method="POST">
@@ -135,7 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <div class="form-bellow">
                     <div class="validate-error"><?php echo $captchaErr;?></div>
-                    <div class="g-recaptcha" data-sitekey="<?php echo SITE_KEY;?>"></div>
+                    <div class="g-recaptcha" data-sitekey="6LdkopkUAAAAAESNyGoVVixcLIfMsoGVLl7j-BuE"></div>
                     <input class="ghn-submit" type="submit" value="Submit">
                 </div>
             </form>

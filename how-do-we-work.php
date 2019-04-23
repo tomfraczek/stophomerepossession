@@ -6,7 +6,7 @@
 
     <main class="hdww-content">
         <section>
-            <h1 class="hdww-header">Simple - We go the extra mile for FREE</h1>
+            <h1 class="hdww-header">Simple - We go the extra mile for <span class="red">FREE</span></h1>
 
             <p>Yes you read it right, our company is focused on giving life changing advice for free that will help homeowners get through difficult times</p>
 
@@ -40,7 +40,7 @@
             </div>
 
         </section>
-        <a class="main-nav--cta hdww-btn" href="">get help now</a>
+        <a class="main-nav--cta hdww-btn" href="get-help-now.php">get help now</a>
     </main>
 </div>
 
